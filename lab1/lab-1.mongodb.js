@@ -22,7 +22,7 @@ db.people.find({country: "France",age:{$gt: 40}}).count();
 db.people.updateMany(
   { salary: { $exists: false } },   
   { $set: { salary: 2500 } }        
-)
+);
 // 12
 db.people.updateMany({ company: "Oodoo" },{ $inc: { salary: 1200 } });
 // 13
@@ -136,4 +136,4 @@ db.people.find({}).sort({ _id: 1 }).skip(0).limit(10);
 db.people.updateMany({country: "France",email: {$ne:"esetchfield2n@ox.ac.uk"} },{$inc: {salary: 100}});
 
 // 6 
-db.people.findOneAndDelete({country: "Sweden"},{sort: {age: 1}})
+db.people.findOneAndDelete({country: "Sweden"},{sort: {age: 1}});
