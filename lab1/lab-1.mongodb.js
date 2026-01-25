@@ -129,7 +129,7 @@ db.people.updateOne({first_name: "Murray"}, {$set:{"fruits.0": "watermelon"}});
 // 4
 // this will show first 10 docs, then for ex: frontend button clicked for next
 // it will add to the skip for ex: 10 (increment)
-// this means we skipped the first 10 docs and showing the  next 10
+// this means we skipped the first 10 docs and showing the  next 10.
 db.people.find({}).sort({ _id: 1 }).skip(0).limit(10);          
 
 // 5
